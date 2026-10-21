@@ -1,37 +1,21 @@
-# EGR404 Mood Playlist Bot — public compliance pages
+# lab5 SMS campaign website
 
-This folder contains **only** the public-facing website for the educational SMS bot:
+This folder contains GitHub Pages for the **registered brand: lab5** (EGR404 educational mood playlist project).
 
-- `index.html` — SMS opt-in instructions and **illustrative** example messages.
-- `privacy.html` — draft Privacy Policy.
-- `terms.html` — draft Terms & Conditions.
-- `styles.css` — shared design.
+## Publish updates
+1. In your existing GitHub repository, upload the updated `index.html`, `privacy.html`, `terms.html`, and `styles.css` files to the repository root. Confirm replacement of existing files, then commit.
+2. Wait for GitHub Pages to redeploy. Open each URL in a private window.
 
-## BEFORE publishing or submitting the Twilio campaign
+## Required before A2P submission
+- Replace `[ADD YOUR SUPPORT EMAIL BEFORE SUBMITTING]` with a real monitored email in `privacy.html` and `terms.html`.
+- Verify actual data retention and edit `privacy.html` if your deployed implementation differs.
+- Ensure the exact registered brand in Twilio is `lab5`.
+- Confirm your production messaging service uses expected Twilio opt-out keyword handling, and your bot enforces consent. Do not claim that the illustrated exchange is an actual screenshot.
+- Confirm the number and your published `START` invitation are correct and that the website URLs open publicly.
+- Do not upload `.env`, tokens, phone logs, or client secrets.
 
-1. Open `privacy.html` and `terms.html`. Replace ALL `[BRACKETED PLACEHOLDERS]` with accurate, verifiable details. The registered brand name must match the Twilio filing. Use a monitored contact email (not an API key or phone credential).
-2. Confirm whether your application stores phone numbers, opt-in state, SMS content, or logs, how long each is stored, and where. Describe that truthfully in `privacy.html`.
-3. Implement and actually test any keyword workflow you advertise: START enrollment with confirmation, STOP opt-out, HELP responses, and consent storage. Consider Twilio's built-in Advanced Opt-Out feature; avoid conflicting automatic and custom responses.
-4. Check your actual opt-in disclosures and make an authentic screenshot of your public signup page. Capture **real** START and confirmation messages after the flow is operational, where Twilio requests them. Do not treat the examples on the page as actual message logs.
-5. Use an appropriately authorized number and complete the applicable messaging registration. Publishing these pages does not, by itself, resolve Twilio error 30034.
-6. Ask the course instructor whether GitHub-hosted pages and your chosen two-participant testing model meet their expectations. Review all policy wording for accuracy before submission.
+## Program disclosure
+Test participants (student and instructor) are invited to opt in by texting START to the registered SMS number. The program replies only to requests; frequency varies; message and data rates may apply. STOP opts out and HELP supplies help. No marketing. Outbound messaging remains unavailable until Twilio approves required registration.
 
-## Publishing through GitHub's website (no Git installation needed)
-
-1. Create a **public** GitHub repository named `egr404-lab5-sms`.
-2. Upload `index.html`, `privacy.html`, `terms.html`, and `styles.css` at the repository root. Do **not** upload your `.env` or application credentials.
-3. Open **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then **Save**.
-4. After deployment, visit:
-   - `https://YOUR-USERNAME.github.io/egr404-lab5-sms/`
-   - `https://YOUR-USERNAME.github.io/egr404-lab5-sms/privacy.html`
-   - `https://YOUR-USERNAME.github.io/egr404-lab5-sms/terms.html`
-5. Open each page in a private/incognito browser window to confirm it is public.
-6. Only after pages and workflows are accurate, paste the privacy and terms URLs into Twilio's required fields. The opt-in proof can reference the main signup page and genuine conversation evidence.
-
-## Do not upload
-
-- `.env`, API tokens, Twilio Auth Token, or Spotify Client Secret.
-- Phone numbers of private testers except the intentionally published Twilio service number.
-- Fabricated sample conversations represented as real test evidence.
-
-These are **draft templates** for a student project, not a claim of carrier compliance or legal advice.
+## Optional reference implementation
+A separately provided `sms_bot_reference.py` shows how to implement opt-in and mood routing. Review and merge it with your existing `sms_bot.py`; it does not automatically alter your local code.
