@@ -7,7 +7,7 @@ This folder contains GitHub Pages for the **registered brand: lab5** (EGR404 edu
 2. Wait for GitHub Pages to redeploy. Open each URL in a private window.
 
 ## Required before A2P submission
-- Replace `[ADD YOUR SUPPORT EMAIL BEFORE SUBMITTING]` with a real monitored email in `privacy.html` and `terms.html`.
+- Verify `ibrahim.tahoun@uri.edu` is the intended, monitored public support email in `privacy.html` and `terms.html`.
 - Verify actual data retention and edit `privacy.html` if your deployed implementation differs.
 - Ensure the exact registered brand in Twilio is `lab5`.
 - Confirm your production messaging service uses expected Twilio opt-out keyword handling, and your bot enforces consent. Do not claim that the illustrated exchange is an actual screenshot.

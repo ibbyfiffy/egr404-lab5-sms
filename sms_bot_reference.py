@@ -85,7 +85,7 @@ def sms():
         return sms_reply(
             f"{BRAND}: Text how you're feeling for Spotify suggestions. "
             "Reply STOP to opt out or START to join. "
-            "Support: [ADD YOUR SUPPORT EMAIL BEFORE DEPLOYMENT]"
+            "Support: ibrahim.tahoun@uri.edu"
         )
     if not opted_in(sender):
         return sms_reply(f"{BRAND}: To receive recommendations, review our website and reply START to opt in. Reply HELP for help.")
